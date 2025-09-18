@@ -37,7 +37,7 @@ dependencies:
   dio: ^5.9.0
   get: ^4.7.2
   flutter_dotenv: ^6.0.0
-  ffmpeg_kit_flutter_new: ^3.2.0
+#  ffmpeg_kit_flutter_new: ^3.2.0
   video_compress: ^3.1.4
   path_provider: ^2.1.5
   file_picker: ^10.3.2
@@ -52,6 +52,9 @@ dependencies:
   geolocator: ^13.0.0
   widget_to_marker: ^1.0.6
   video_player: ^2.10.0
+  lottie: ^3.3.1
+  maplibre_gl: ^0.22.0
+  http: ^1.5.0
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +82,7 @@ flutter:
   assets:
     - .env
     - assets/marker_pin_avatar.png
+    - assets/flower.json
 #    -
 
   # An image asset can refer to one or more resolution-specific "variants", see

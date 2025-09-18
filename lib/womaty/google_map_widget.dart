@@ -220,7 +220,7 @@ class _GoogleMapWidgetState extends State<GoogleMapWidget> {
               initialCameraPosition: initialPosition!,
               myLocationEnabled: true,
               myLocationButtonEnabled: false,
-              // markers: markers,
+              markers: markers,
               style: jsonEncode(styleJson),
               zoomControlsEnabled: false,
               heatmaps: {

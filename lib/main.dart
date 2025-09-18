@@ -1,9 +1,11 @@
 import 'package:demo/animation_widget.dart';
-import 'package:demo/demo.dart';
-import 'package:demo/womaty/ffmeg_video_compression.dart';
 import 'package:demo/womaty/home.dart';
+import 'package:demo/womaty/home_controller.dart';
+import 'package:demo/womaty/map_example_file.dart';
+import 'package:demo/womaty/map_libre_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:get/get.dart';
 
 void main() async {
   await dotenv.load();
@@ -15,13 +17,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: const CustomMarkerPage(),
+      initialBinding: BindingsBuilder(() {
+        Get.lazyPut<HomeController>(() => HomeController());
+      }),
     );
   }
 }
